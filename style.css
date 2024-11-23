@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    background-image: linear-gradient(40deg, rgba(12, 97, 136, 0.678), rgba(22, 172, 218, 0.699));
+    color: white;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.226);
+    padding: 5px;
+}
+.block01{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box-player01,.box-player02{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    flex-direction: column;
+    position: relative;
+}
+label{
+    color: rgb(73, 72, 72);
+    font-size: larger;
+    position: absolute;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.box-input input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    height: 30px;
+    width: 250px;
+    font-size: larger;
+    transition: all 500ms ease-in-out;
+}
+.box-input input:valid,.box-input input:focus{
+    border-bottom: 1px solid cornflowerblue;
+}
+.box-input input:valid ~ label,.box-input input:focus ~ label{
+    transform: translateY(-24px);
+    font-size: medium;
+}
+.box-player01 .box-buttons,.box-player02 .box-buttons{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+}
+.box-player01 button,.box-player02 button{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    filter: drop-shadow(0px 5px rgb(66, 100, 90));
+    font-size: larger;
+    background-color: rgb(192, 245, 232);
+    transition: all 500ms ease-in-out;
+}
+.box-player01 button:hover,.box-player02 button:hover{
+    background-color: rgb(155, 219, 209);
+    transform: scale(1.1);
+}
+.block02{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+}
+.box-button-play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.box-button-play button{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    display: none;
+    cursor: pointer;
+    animation: show 500ms ease-in-out;
+    animation: shake 300ms linear;
+}
+/* animações */
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes shake {
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+/* responsividade */
+
+@media (max-width: 999px){
+    .box-input input{
+        width: 150px;
+    }
+    .box-player01 button,.box-player02 button{
+        height: 40px;
+        width: 40px;
+    }
+    .block01{
+        justify-content: center;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Selega velha</title>
+</head>
+<body>
+    <script src="script.js" defer></script>
+    <header>
+        <h1>Selega Velha</h1>
+    </header>
+    <section class="block01">
+        <div class="box-player01">
+            <div class="box-title">
+                <h2>Escolha:</h2>
+            </div>
+            <div class="box-input">
+                <input id="input-player01" type="text" required>
+                <label for="input-player01">Nome player 1</label>
+            </div>
+            <div class="box-buttons">
+                <button id="btn-x-p1" onclick="save('X','player1')">X</button>
+                <button id="btn-o-p1" onclick="save('O','player1')">O</button>
+                <button id="btn-s-p1" onclick="save('S','player1')">S</button>
+            </div>
+        </div>
+        <div class="box-player02">
+            <div class="box-title">
+                <h2>Escolha:</h2>
+            </div>
+            <div class="box-input">
+                <input id="input-player02" type="text" required>
+                <label for="input-player02">Nome player 2</label>
+            </div>
+            <div class="box-buttons">
+                <button id="btn-x-p2" onclick="save('X','player2')">X</button>
+                <button id="btn-o-p2" onclick="save('O','player2')">O</button>
+                <button id="btn-s-p2" onclick="save('S','player2')">S</button>
+            </div>
+        </div>
+    </section>
+    <section class="block02">
+        <div class="box-button-play">
+            <a href="play.html"><button id="btn-play">Jogar</button></a>
+        </div>
+    </section>
+</body>
+</html>

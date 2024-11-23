@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="play.css">
+    <title>Selega Velha</title>
+</head>
+<body>
+    <script src="main.js" defer></script>
+    <main id="background">
+        <header>
+            <h1>Selega Velha</h1>
+        </header>
+        <section class="block01">
+            <div class="grid" id="grid">
+                <p class="position" id="i-01" onclick="show(this)"></p>
+                <p class="position" id="i-02" onclick="show(this)"></p>
+                <p class="position" id="i-03" onclick="show(this)"></p>
+                <p class="position" id="i-04" onclick="show(this)"></p>
+                <p class="position" id="i-05" onclick="show(this)"></p>
+                <p class="position" id="i-06" onclick="show(this)"></p>
+                <p class="position" id="i-07" onclick="show(this)"></p>
+                <p class="position" id="i-08" onclick="show(this)"></p>
+                <p class="position" id="i-09" onclick="show(this)"></p>
+            </div>
+        </section>
+        <section class="block02">
+            <input type="text" disabled id="choice-user">
+            <h3 id="name-player"></h3>
+        </section>
+    </main>
+    <div class="box-choice" id="box-choice">
+        <div class="box-title">
+            <h1 style="letter-spacing: 0.7px;">Quem começa jogando?</h1>
+        </div>
+        <div class="box-img">
+            <img src="assets/imagem-escolher-player.png" alt="imagem-escolher-jogador" width="300px" height="300px">
+        </div>
+        <div class="box-button">
+            <button id="player1"></button>
+            <button id="player2"></button>
+        </div>
+    </div>
+    <div class="box-winner" id="box-winner">
+        <div class="box-title">
+            <h2 id="text-winner"></h2>
+        </div>
+        <div class="box-image">
+            <img src="assets/winner_image.png" alt="imagem_vencedor" height="300px" width="300px">
+        </div>
+        <div class="box-button">
+            <a href="index.html"><button id="btn-back">Voltar</button></a>
+            <a href="play.html"><button id="btn-newplay">Jogar novamente</button></a>
+        </div>
+    </div>
+    <div class="box-velha" id="box-velha">
+        <div class="box-title">
+            <h2>Infelizmente deu Selega</h2>
+        </div>
+        <div class="box-image">
+            <img src="assets/imagem_empate.png" alt="imagem_empate" height="300px" width="300px">
+        </div>
+        <div class="box-button">
+            <a href="index.html"><button id="btn-back">Voltar</button></a>
+            <a href="play.html"><button id="btn-newplay">Jogar novamente</button></a>
+        </div>
+    </div>
+</body>
+</html>

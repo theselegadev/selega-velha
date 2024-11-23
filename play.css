@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width: 100vw;
+    background-image: linear-gradient(40deg, rgba(12, 97, 136, 0.678), rgba(22, 172, 218, 0.699));
+    color: white;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.226);
+    padding: 5px;
+}
+main{
+    filter: blur(20px);
+}
+.block01{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    height: 90%;
+    width: 60%;
+}
+#i-01,#i-02,#i-03,#i-04,#i-05,#i-06,#i-07,#i-08,#i-09{
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+#i-01:hover,#i-02:hover,#i-03:hover,#i-04:hover,#i-05:hover,#i-06:hover,#i-07:hover,#i-08:hover,#i-09:hover{
+    background-color: rgb(252, 249, 249);
+}
+#i-01{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 1px solid black;
+    border-left: none;
+    border-top: none;
+    background-color: white;
+}
+#i-02{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 1px solid black;
+    border-top: none;
+    background-color: white;
+}
+#i-03{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    background-color: white;
+}
+#i-04{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid black;
+    border-left: none;
+    background-color: white;
+}
+#i-05{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid black;
+    background-color: white;
+}
+#i-06{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid black;
+    border-right: none;
+    background-color: white;
+}
+#i-07{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 1px solid black;
+    border-left: none;
+    border-bottom: none;
+    background-color: white;
+}
+#i-08{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 1px solid black;
+    border-bottom: none;
+    background-color: white;
+}
+#i-09{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 1px solid black;
+    border-bottom: none;
+    border-right: none;
+    background-color: white;
+}
+.block02{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.block02 h3{
+    font-size: x-large;
+    letter-spacing: 0.6px;
+    margin: 20px;
+}
+.box-choice{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.466);
+    width: 500px;
+    height: 450px;
+    background-color: white;
+}
+.box-title{
+    width: 100%;
+    padding: 30px;
+}
+.box-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#choice-user{
+    height: 60px;
+    width: 60px;
+    font-size: xx-large;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+    filter: drop-shadow(0px 5px rgb(51, 91, 165));
+    color: black;
+}
+#player1,#player2{
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid rgb(126, 208, 219);
+    border-radius: 5px;
+    box-shadow: 0px 5px rgb(56, 123, 143);
+    font-size: large;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+#player1:hover,#player2:hover{
+    background-color: rgb(228, 253, 245);
+    transform: scale(1.1);
+}
+.box-winner{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.466);
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    display: none;
+    animation: show 500ms ease-in-out;
+}
+.box-winner .box-title{
+    margin-top: 10px;
+}
+.box-winner .box-button{
+    margin-bottom: 50px;
+}
+#btn-back{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    display: block;
+    cursor: pointer;
+}
+#btn-newplay{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    display: block;
+    cursor: pointer;
+}
+#btn-newplay:hover{
+    animation: shake 400ms infinite;
+}
+#btn-back:hover{
+    animation: shake 400ms infinite;
+}
+.box-velha{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.466);
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    display: none;
+    animation: show 500ms ease-in-out;
+}
+/* animações */
+
+@keyframes shake {
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* responsividade */
+
+@media (max-width:999px){
+    .box-choice{
+        height: 500px;
+        width: 350px;
+    }
+    #player1,#player2{
+        width: 150px;
+    }
+    .box-winner{
+        height: 500px;
+        width: 350px;
+    }
+    .box-velha{
+        height: 500px;
+        width: 350px;
+    }
+}
